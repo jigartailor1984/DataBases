@@ -8,7 +8,7 @@ services:
       - POSTGRES_PASSWORD=password@123456
       - POSTGRES_DB=productDb
     ports:
-      - "5440:5432"
+      - "5432:5432"
     restart: always
     volumes:
       - database-data:/var/lib/postgresql/data/
