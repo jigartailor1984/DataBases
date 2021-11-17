@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  sql_database:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+       - ACCEPT_EULA=Y
+       - SA_PASSWORD=$SA_PASSWORD
+      # - MSSQL_PID=Express
+       - MSSQL_PID=$MSSQL_PID
+      # - MSSQL_PID=Standard
+      # - MSSQL_PID=Enterprise
+      # - MSSQL_PID=EnterpriseCore
+    ports:
+      - "1433:1433"
